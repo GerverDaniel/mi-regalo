@@ -60,8 +60,56 @@ body {
 .boton:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 92, 138, 0.7);
+    /* ===== VERSION MOVIL ===== */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .contenedor {
+        width: 90%;
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .corazon {
+        font-size: 4rem;
+    }
+
+    button, .boton {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 14px;
+        margin-top: 10px;
+    }
+
+    .flor {
+        font-size: 2rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+}
+
 }
 .fade-out {
     opacity: 0;
     transition: opacity 0.6s ease;
 }
+
