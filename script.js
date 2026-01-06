@@ -1,62 +1,39 @@
 let porcentaje = 0;
 
 function llenarCorazon() {
+    const progreso = document.getElementById("progreso");
+    const emoji = document.getElementById("emoji");
+    const corazon = document.getElementById("corazon");
+    const mensaje = document.getElementById("mensaje");
+    const sonido = document.getElementById("sonidoLatido");
+    const entrar = document.getElementById("entrar");
+    const nombre = document.getElementById("nombre");
+
     if (porcentaje < 100) {
-        porcentaje += 10;
-
-        const progreso = document.getElementById("progreso");
-        const corazon = document.getElementById("corazon");
-        const emoji = document.getElementById("emoji");
-        const sonido = document.getElementById("sonidoLatido");
-
+        porcentaje += 20;
         progreso.style.width = porcentaje + "%";
-        const mensaje = document.getElementById("mensaje");
 
-if (porcentaje <= 30) {
-    mensaje.textContent = "Un poquito de amor 💕";
-}
-else if (porcentaje <= 60) {
-    mensaje.textContent = "Ya late más fuerte 💗";
-}
-else if (porcentaje < 100) {
-    mensaje.textContent = "Casi completo… 💞";
-}
-else {
-    mensaje.textContent = "Todo mi corazón es tuyo 💖";
-}
+        corazon.classList.add("latido");
+        setTimeout(() => corazon.classList.remove("latido"), 400);
 
-
-        // sonido
         if (sonido) {
             sonido.currentTime = 0;
             sonido.play();
         }
 
-        // animación (reinicio forzado)
-        corazon.classList.remove("latido");
-        void corazon.offsetWidth;
-        corazon.classList.add("latido");
-
-        // cambio de emoji
-        if (porcentaje >= 50) {
-            emoji.textContent = "💗";
-        }
-
-if (porcentaje >= 100) {
-    emoji.textContent = "💖";
-   const boton = document.getElementById("entrar");
-boton.style.display = "inline-block";
-
-    const nombre = document.getElementById("nombre");
-    nombre.classList.add("brillo");
-}
-            setTimeout(() => {
-    document.getElementById("transicion").classList.add("activa");
-}, 300);
-
+        if (porcentaje >= 100) {
+            emoji.textContent = "💖";
+            mensaje.textContent = "Amor completo 💞";
+            entrar.style.display = "inline-block";
+            nombre.classList.add("brillo");
+        } else {
+            mensaje.textContent = "Más amor 💕";
         }
     }
-    function irAlMenu() {
-    window.location.href = "menu.html.";
 }
+
+function irAlMenu() {
+    window.location.href = "menu.html";
+}
+
 
