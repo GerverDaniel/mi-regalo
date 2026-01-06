@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg, #ffe4ec, #ffd1dc, #ffb6c1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* CORAZONES */
+.corazones span {
+    position: fixed;
+    bottom: -20px;
+    font-size: 22px;
+    animation: flotar 6s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes flotar {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh) scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* CONTENEDOR */
+.contenedor {
+    background: rgba(255,255,255,0.8);
+    padding: 50px 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 35px rgba(255, 92, 138, 0.7);
+    max-width: 520px;
+    width: 90%;
+    text-align: center;
+    animation: aparecer 1.2s ease;
+    z-index: 2;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TÍTULO */
+h1 {
+    color: #ff2f6d;
+    margin-bottom: 25px;
+    animation: brilloTitulo 1.5s infinite alternate;
+}
+
+@keyframes brilloTitulo {
+    from {
+        text-shadow: 0 0 8px #ffb6c1;
+    }
+    to {
+        text-shadow: 0 0 18px #ff5c8a;
+    }
+}
+
+/* MENSAJE */
+#mensaje {
+    font-size: 1.1em;
+    color: #a94463;
+    min-height: 120px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* BOTÓN */
+#botonPromesa {
+    padding: 14px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff5c8a, #ff85a1);
+    color: white;
+    cursor: pointer;
+    animation: latido 1.5s infinite;
+    box-shadow: 0 0 20px rgba(255, 92, 138, 0.7);
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* RESPUESTA */
+#respuesta {
+    margin-top: 25px;
+    font-size: 1.3em;
+    color: #ff2f6d;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}

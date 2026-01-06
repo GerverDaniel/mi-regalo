@@ -1,0 +1,67 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* FONDO GENERAL */
+body {
+    min-height: 100vh;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg, #ffd1dc, #ffe4ec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR DEL MENÚ */
+.menu {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.8);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* TÍTULO */
+.menu h1 {
+    color: #ff5c8a;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.menu p {
+    color: #a94463;
+    margin-bottom: 30px;
+}
+
+/* CONTENEDOR DE BOTONES */
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* BOTONES DEL MENÚ */
+.boton {
+    padding: 18px;
+    border-radius: 20px;
+    background: #ff5c8a;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* EFECTO HOVER */
+.boton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 92, 138, 0.7);
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Ti 💕</title>
+
+    <style>
+        #transicion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffd1dc, #ffe4ec);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.2s ease;
+    z-index: 9999;
+    #nombre {
+    color: #ff2f6d;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: aparecer 1.5s ease forwards;
+    .brillo {
+    animation: brilloSuave 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes brilloSuave {
+    from {
+        text-shadow: 0 0 5px #ffb6c1;
+    }
+    to {
+        text-shadow: 0 0 15px #ff5c8a, 0 0 30px #ffd1dc;
+    }
+}
+
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+}
+
+#transicion.activa {
+    opacity: 1;
+    pointer-events: all;
+}
+
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(135deg, #ffd1dc, #ffe4ec);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 100vh;
+
+        }
+
+        .flor {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .flor1 { top: 10%; left: 10%; }
+        .flor2 { top: 20%; right: 15%; }
+        .flor3 { bottom: 15%; left: 20%; }
+        .flor4 { bottom: 10%; right: 10%; }
+
+        .contenedor {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 182, 193, 0.8);
+            max-width: 400px;
+        }
+
+        h1 { color: #ff5c8a; }
+        p { color: #a94463; }
+
+        .corazon {
+    font-size: 5rem;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.corazon {
+    font-size: 5rem;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+@keyframes latir {
+    0%   { transform: scale(1); }
+    30%  { transform: scale(1.3); }
+    60%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.latido {
+    animation: latir 0.4s ease;
+}
+
+#nombre {
+    color: #ff2f6d;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+/* BRILLO SOLO CUANDO SE ACTIVA */
+.brillo {
+    animation: brilloSuave 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes brilloSuave {
+    from {
+        text-shadow: 0 0 4px #ffb6c1;
+    }
+    to {
+        text-shadow: 
+            0 0 12px #ff5c8a,
+            0 0 25px #ffd1dc;
+    }
+}
+
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- FLORES -->
+    <div class="flor flor1">🌹</div>
+    <div class="flor flor2">🌷</div>
+    <div class="flor flor3">🌹</div>
+    <div class="flor flor4">🌷</div>
+
+    <!-- CONTENEDOR -->
+    <div class="contenedor">
+        <h2 id="nombre">Para Kelly Andrea 💕</h2>
+        <h1>💖 Bienvenida Mamor 💖</h1>
+        <p>Antes de entrar, llena este corazón con amor :3</p>
+        <p id="mensaje" style="font-size:1.1em; margin-top:15px;">
+    Un poquito de amor 💕
+</p>
+
+<div class="corazon" id="corazon">
+    <span id="emoji">🤍</span>
+</div>
+
+
+<div class="barra">
+    <div class="progreso" id="progreso"></div>
+</div>
+
+<button onclick="llenarCorazon()">💗 Dar amor</button>
+
+</button>
+
+<br><br>
+
+<button id="entrar" type="button" onclick="irAlMenu()">Entrar 💕</button>
+
+
+
+
+
+</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+<audio id="sonidoLatido" src="latidos.mp3.mp3" preload="auto"></audio>
+
+</body>
+</html>
