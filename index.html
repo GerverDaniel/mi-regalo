@@ -97,8 +97,24 @@ p { color: #a94463; }
         text-shadow: 0 0 12px #ff5c8a, 0 0 25px #ffd1dc;
     }
 }
-</style>
 
+/* BARRA DE PROGRESO */
+.barra {
+    width: 100%;
+    height: 15px;
+    background: #ffd1dc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progreso {
+    height: 100%;
+    width: 0%;
+    background: #ff5c8a;
+    transition: width 0.3s ease;
+}
+</style>
     
 </head>
 
@@ -143,4 +159,5 @@ p { color: #a94463; }
 
 </body>
 </html>
+
 
